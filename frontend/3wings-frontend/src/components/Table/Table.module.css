@@ -1,0 +1,221 @@
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 80vh auto;
+  width: 100vw;  
+  margin: 0 auto;
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid rgb(31, 48, 60);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    height: 20vw;
+    overflow: auto;
+}
+
+td, th {
+    border: 1px solid rgba(0, 0, 0, 0.200);
+    padding: 1px;
+    margin: 1px;
+    text-align: center;
+    height: max-content;
+    width: max-content;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: rgba(31, 48, 60, 0.288);
+}
+
+thead > tr > th{
+    background-color: rgba(31, 48, 60, 0.747);
+}
+
+tbody > tr:nth-child(even):hover {
+    background-color: rgba(31, 48, 60, 0.4);
+}
+
+tbody > tr:nth-child(odd):hover {
+    background-color: rgba(31, 48, 60, 0.2);
+}
+
+tbody > tr > td:last-child {    
+    flex-direction: row;
+    width: fit-content;
+}
+
+/* Comum a todos os botões */
+
+.btnVer, .btnEditar, .btnExcluir {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    margin-left: 5px;
+    cursor: pointer;
+    height: auto;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+/* Botão de Visualização */
+
+.btnVer {
+    background: linear-gradient(to bottom, rgb(2, 185, 218), rgba(2, 185, 218, 0.3));
+    border: 1px solid rgba(1, 158, 185, 0.6);
+}
+
+.btnVer:hover {
+    background: linear-gradient(to bottom, rgb(5, 216, 253), rgba(5, 216, 253, 0.3));
+    border: 1px solid rgba(1, 158, 185, 0.3);
+}
+
+.btnVer:active {
+    background: linear-gradient(to bottom, rgb(1, 117, 138), rgba(1, 117, 138, 0.3));
+    border: 1px solid rgba(1, 158, 185, 0.3);
+}
+
+/* Botão de Exclusão */
+
+.btnExcluir {
+    background: linear-gradient(to bottom, rgb(172, 21, 2), rgba(172, 21, 2, 0.7));
+    border: 1px solid rgba(141, 18, 1, 0.6);
+}
+
+.btnExcluir:hover {
+    background: linear-gradient(to bottom, rgb(187, 22, 0), rgba(187, 22, 0, 0.7));
+    border: 1px solid rgba(141, 18, 1, 0.6);
+}
+
+.btnExcluir:active {
+    background: linear-gradient(to bottom, rgb(116, 15, 2), rgba(116, 15, 2, 0.7));
+    border: 1px solid rgba(141, 18, 1, 0.6);
+}
+
+/* Botão de Edição */
+
+.btnEditar {
+    background: linear-gradient(to bottom, rgb(13, 62, 167), rgba(13, 62, 167, 0.7));
+    border: 1px solid rgba(8, 40, 109, 0.6);
+}
+
+.btnEditar:hover {
+    background: linear-gradient(to bottom, rgb(17, 80, 216), rgba(17, 80, 216, 0.7));
+    border: 1px solid rgba(17, 80, 216, 0.6);
+}
+
+.btnEditar:active {
+    background: linear-gradient(to bottom, rgb(8, 38, 104), rgba(8, 38, 104, 0.7));
+    border: 1px solid rgba(8, 40, 109, 0.6);
+}
+
+/* Botão de Criação de Produto */
+
+.btnAdd {
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(to left, rgb(11, 114, 11), rgb(16, 163, 16));
+    border: 1px solid rgb(14, 141, 14);
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px black;
+    width: auto;
+    height: 32px;
+    font-size: 18px;
+}
+
+.btnAdd > i {
+    margin-right: 5px;
+    color: rgb(2, 56, 2);
+}
+
+.btnAdd:hover {
+    background-color: rgb(14, 141, 14);
+    cursor: pointer;
+}
+
+.btnAdd:active {
+    transform: translateY(2px);
+}
+
+.linkCreateProductContainer {
+    width: calc(100vw * 0.5);
+    display: flex;
+    align-items: flex-start;
+}
+
+.linkCreateProduct {
+    text-decoration: none;
+}
+
+.btnAccept {
+    background-color: red;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .linkCreateProductContainer {
+        width: 90vw;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .tableContainer {
+        width: 100vw;
+        height: 90vh;
+        /* overflow: hidden; */
+    }
+
+    .btnVer, .btnEditar, .btnExcluir {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 0.8rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        cursor: pointer;
+        width: 40px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    table {
+        font-size: 0.8rem;
+        width: 90vw;
+    }
+
+    tbody > tr > td:last-child {
+        flex-direction: row;
+        width: 140px
+    }
+
+    td, th { 
+        height: 2px
+    }
+}
+
+@media (min-width: 768px) {
+    .linkCreateProductContainer {
+        width: 90vw;
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .tableContainer {
+        width: 100vw;
+        height: 90vh;
+        overflow: scroll;
+    }
+
+    table {
+        font-size: 0.8rem;
+        width: 90vw;
+        max-height: 240px;
+    }
+
+}

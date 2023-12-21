@@ -1,0 +1,46 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btnSubmit {
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    background: linear-gradient(to bottom, rgb(13, 62, 167), rgba(13, 62, 167, 0.7));
+    box-shadow: 2px 2px 2px rgb(31, 48, 60);
+    align-self: end;
+}
+
+.btnSubmit:hover {
+    background: linear-gradient(to bottom, rgb(17, 80, 216), rgba(17, 80, 216, 0.7));
+}
+
+.btnSubmit:active {
+    background: linear-gradient(to bottom, rgb(8, 38, 104), rgba(8, 38, 104, 0.7));
+    transform: translateY(1px);
+}
+
+.btnReturn {
+    margin-left: 0.8em;
+    border: none;
+    background-color: rgba(133, 131, 131, 0.2);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(31, 48, 60, 0.4);
+    cursor: pointer;
+    font-size: 1.5em;
+    color: rgba(31, 48, 60, 0.9);
+}
+
+.btnReturn:hover {
+    background-color: rgba(197, 195, 195, 0.2);
+}
