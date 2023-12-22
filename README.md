@@ -20,6 +20,7 @@ Navegue até o diretório backend do projeto no terminal:
 cd 3wings-app/backend
 ```
 Execute o seguinte comando para limpar, compilar e gerar o arquivo **JAR**:
+##### **OBS:** Este comando além de limpar, compilar e gerar o arquivo JAR, também irá realizar os testes. Mas caso queira executar apenas os testes separadamente, use "*./mvnw test*"
 
 ```
 ./mvnw clean package
