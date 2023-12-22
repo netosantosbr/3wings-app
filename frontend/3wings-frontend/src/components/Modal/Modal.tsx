@@ -13,7 +13,7 @@ const Modal = ({ isOpen, product, closeModal }) => {
                 <h2 className={styles.title}>{name}</h2>
                 <div className={styles.infoContainer}>
                   <label>Descrição:</label><span>{description}</span>
-                  <label>Preço:</label><span>{price}</span>
+                  <label>Preço:</label><span>R$ {price}</span>
                   <label>Data de criação:</label><span>{created_at}</span>
                   <label>Data de modificação:</label> <span>{updated_at}</span>
                 </div>

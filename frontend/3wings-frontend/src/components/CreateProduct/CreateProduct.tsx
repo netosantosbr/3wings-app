@@ -27,6 +27,13 @@ const CreateProduct = () => {
     }
   };
 
+  const handleChangeTextarea = (e: ChangeEvent<HTMLTextAreaElement>): void => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }));
+  }
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
 
@@ -62,8 +69,8 @@ const CreateProduct = () => {
             <form className={styles.form} onSubmit={handleSubmit}>
                 <button className={styles.btnReturn} onClick={() => navigate('/')}><i className='fa fa-arrow-left'></i></button>
                 <h1>Cadastro de Produto</h1>
-                <label>Nome:</label><input type='text' name="name" value={formData.name} onChange={handleChange} required />
-                <label>Descrição:</label><input type='text' name="description" value={formData.description} onChange={handleChange} />
+                <label>Nome:</label><input type='text' name="name" value={formData.name} onChange={handleChange} required maxLength={255} />
+                <label>Descrição:</label><textarea name="description" value={formData.description} onChange={handleChangeTextarea} rows={6} maxLength={255} />
                 <label>Preço:</label><input type='number' name="price" value={formData.price} onChange={handleChange} required />
 
                 <button className={styles.btnSubmit} type='submit'><i className='fa fa-plus' /> Criar produto</button> 

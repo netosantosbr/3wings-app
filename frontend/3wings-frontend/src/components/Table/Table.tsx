@@ -36,10 +36,12 @@ const Table = () => {
     confirmDialog({
         message: 'Tem certeza que deseja excluir?',
         header: 'Exclusão de Produto',
-        icon: 'fa fa-exclamation-triangle',   
+        icon: 'fa fa-exclamation-triangle',
+        acceptLabel: 'Sim',  
         acceptIcon: 'fa fa-check',
         acceptClassName: 'bg-bluegray-800',
         rejectClassName: 'mr-1 bg-bluegray-800',
+        rejectLabel: 'Não',
         showHeader: false,
         contentStyle: {color: 'black', marginBottom: '10px'},     
         style: {width: 'auto', height:'auto', alignItems: 'center', backgroundColor: 'white', padding: '20px', boxShadow: '1px 1px 6px black'},
@@ -94,7 +96,7 @@ const Table = () => {
                 <td colSpan={5}>A lista está vazia.</td>
             </tr>) : (
             products.map((product) => (
-                <tr key={product.id}>
+                <tr className={styles.rowTable} key={product.id}>
                     <td onClick={() => handleClick(product)}>{product.id}</td>
                     <td onClick={() => handleClick(product)}>{product.name}</td>
                     <td onClick={() => handleClick(product)}>R$ {product.price}</td>

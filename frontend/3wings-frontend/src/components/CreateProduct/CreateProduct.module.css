@@ -32,7 +32,7 @@ form > label {
     margin-top: 10px;
 }
 
-form > input {
+form > input, form > textarea {
     height: 3em;
     width: 30em;
     margin-left: 1em;
@@ -41,6 +41,12 @@ form > input {
     border-radius: 12px;
     padding-left: 10px;
 }
+
+form > textarea {
+    height: auto;
+    resize: none;
+}
+
 
 .btnSubmit {
     font-size: 18px;
